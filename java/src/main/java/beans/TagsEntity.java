@@ -3,12 +3,20 @@ package beans;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tags", schema = "detailsstock", catalog = "")
+@Table(name = "tags", schema = "detailsstock")
 public class TagsEntity {
     private int id;
     private String name;
 
+    public TagsEntity() {
+    }
+
+    public TagsEntity(String name) {
+        this.name = name;
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;

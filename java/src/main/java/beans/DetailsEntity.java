@@ -3,7 +3,7 @@ package beans;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "details", schema = "detailsstock", catalog = "")
+@Table(name = "details", schema = "detailsstock")
 public class DetailsEntity {
     private int id;
     private int code;
@@ -11,15 +11,24 @@ public class DetailsEntity {
     private String name;
     private int count;
 
+    public DetailsEntity() {
+    }
+
+    public DetailsEntity(int code, String description, String name, int count) {
+        this.code = code;
+        this.description = description;
+        this.name = name;
+        this.count = count;
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) { this.id = id; }
 
     @Basic
     @Column(name = "code", nullable = false)
@@ -64,26 +73,25 @@ public class DetailsEntity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof DetailsEntity)) return false;
 
         DetailsEntity that = (DetailsEntity) o;
 
-        if (id != that.id) return false;
-        if (code != that.code) return false;
-        if (count != that.count) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-
-        return true;
+        if (getId() != that.getId()) return false;
+        if (getCode() != that.getCode()) return false;
+        if (getCount() != that.getCount()) return false;
+        if (getDescription() != null ? !getDescription().equals(that.getDescription()) : that.getDescription() != null)
+            return false;
+        return getName() != null ? getName().equals(that.getName()) : that.getName() == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + code;
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + count;
+        int result = getId();
+        result = 31 * result + getCode();
+        result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
+        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+        result = 31 * result + getCount();
         return result;
     }
 }

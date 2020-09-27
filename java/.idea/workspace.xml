@@ -5,19 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70224904-b3e9-4093-8f94-2f3224534523" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc7122c0-d8ba-4f7e-ab73-742b53badd8e.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc7122c0-d8ba-4f7e-ab73-742b53badd8e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pda.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/DetailsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/DetailsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/SortsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/SortsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/TagsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/TagsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/TypesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/TypesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/beans/UnitsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/beans/UnitsEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="hibernate-configuration-5.2" />
+        <option value="hibernate-main-5.2" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -38,9 +46,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="3b43d20f-227a-455d-b51d-999c81bd5961" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.42988506" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="beans" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -63,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601236239551</updated>
-      <workItem from="1601236240580" duration="72000" />
+      <workItem from="1601236240580" duration="1504000" />
     </task>
     <servers />
   </component>
@@ -75,5 +98,33 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1601236311982" />
+    <state x="488" y="99" key="#com.intellij.ide.util.MemberChooser" timestamp="1601237641051">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1601237641051" />
+    <state x="412" y="159" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1601236432052">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="412" y="159" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.768@0.0.1366.768" timestamp="1601236432052" />
+    <state x="311" y="72" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1601236405192">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="311" y="72" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.768@0.0.1366.768" timestamp="1601236405192" />
+    <state x="356" y="34" width="659" height="660" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog" timestamp="1601236453255">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="356" y="34" width="659" height="660" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog/0.0.1366.768@0.0.1366.768" timestamp="1601236453255" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1601236559283">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1601236559283" />
+    <state x="498" y="161" key="chooseDestDirectoryDialog" timestamp="1601236431193">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="498" y="161" key="chooseDestDirectoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1601236431193" />
+    <state x="387" y="275" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1601236552155">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="387" y="275" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.768@0.0.1366.768" timestamp="1601236552155" />
   </component>
 </project>

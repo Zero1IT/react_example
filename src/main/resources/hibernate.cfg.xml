@@ -4,17 +4,16 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/detailsstock</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/all_dump</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">MYSQL_password</property>
-        <mapping class="com.gstu.pda.beans.DetailsEntity"/>
-        <mapping class="com.gstu.pda.beans.SortsEntity"/>
-        <mapping class="com.gstu.pda.beans.TagsEntity"/>
-        <mapping class="com.gstu.pda.beans.TypesEntity"/>
-        <mapping class="com.gstu.pda.beans.UnitsEntity"/>
-
-        <!-- DB schema will be updated if needed -->
+        <property name="connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <mapping class="com.gstu.pda.entities.DetailsEntity"/>
+        <mapping class="com.gstu.pda.entities.SortsEntity"/>
+        <mapping class="com.gstu.pda.entities.TagsEntity"/>
+        <mapping class="com.gstu.pda.entities.TypesEntity"/>
+        <mapping class="com.gstu.pda.entities.UnitsEntity"/>
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>

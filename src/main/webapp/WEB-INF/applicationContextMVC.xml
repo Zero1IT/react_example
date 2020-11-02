@@ -15,6 +15,9 @@
             http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
     <mvc:annotation-driven validator="validator" />
+    <mvc:cors>
+        <mvc:mapping path="/**" allowed-methods="*"/>
+    </mvc:cors>
     <jpa:repositories base-package="com.gstu.pda.database"
                       transaction-manager-ref="txManager"
                       entity-manager-factory-ref="sessionFactory" />
@@ -46,6 +49,7 @@
     <bean id="validationMessageSource"
           class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basename">
+            <!--suppress SpringInjectionValueStyleInspection -->
             <value>classpath:errors/validation</value>
         </property>
     </bean>

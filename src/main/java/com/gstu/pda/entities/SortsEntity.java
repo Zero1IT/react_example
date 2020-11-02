@@ -1,6 +1,9 @@
 package com.gstu.pda.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -8,6 +11,8 @@ import java.util.Objects;
 public class SortsEntity {
     private int id;
     private String name;
+    @JsonIgnore
+    private Collection<DetailsEntity> details;
 
     public SortsEntity() {
     }
@@ -35,6 +40,15 @@ public class SortsEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @OneToMany(mappedBy = "sorts")
+    public Collection<DetailsEntity> getDetails() {
+        return details;
+    }
+
+    public void setDetails(Collection<DetailsEntity> detailsById) {
+        this.details = detailsById;
     }
 
     @Override

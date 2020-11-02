@@ -3,7 +3,6 @@ package com.gstu.pda.entities;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 import java.util.Objects;
@@ -18,10 +17,13 @@ public class DetailsEntity {
     @Length(max = 300)
     private String description;
     @Length(max = 50, message = "{error.details.name}")
-    @Pattern(regexp = "^[a-zA-Z\\s]{5,}$", message = "{error.details.name.pattern}")
     private String name;
     @Positive
     private int count;
+    private UnitsEntity units;
+    private SortsEntity sorts;
+    private TypesEntity types;
+    private TagsEntity tags;
 
     public DetailsEntity() {
     }
@@ -80,6 +82,46 @@ public class DetailsEntity {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "unitId", referencedColumnName = "id", nullable = false)
+    public UnitsEntity getUnits() {
+        return units;
+    }
+
+    public void setUnits(UnitsEntity unitsByUnitId) {
+        this.units = unitsByUnitId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "sortId", referencedColumnName = "id", nullable = false)
+    public SortsEntity getSorts() {
+        return sorts;
+    }
+
+    public void setSorts(SortsEntity sortsBySortId) {
+        this.sorts = sortsBySortId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "typeId", referencedColumnName = "id", nullable = false)
+    public TypesEntity getTypes() {
+        return types;
+    }
+
+    public void setTypes(TypesEntity typesByTypeId) {
+        this.types = typesByTypeId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "tagId", referencedColumnName = "id", nullable = false)
+    public TagsEntity getTags() {
+        return tags;
+    }
+
+    public void setTags(TagsEntity tagsByTagId) {
+        this.tags = tagsByTagId;
     }
 
     @Override

@@ -47,4 +47,9 @@ public class BasicController<T> {
     public void delete(@RequestBody T entity) {
         repository.delete(entity);
     }
+
+    @DeleteMapping("/all")
+    public void deleteRange(@RequestBody List<T> entities) {
+        repository.deleteAll(entities);
+    }
 }
